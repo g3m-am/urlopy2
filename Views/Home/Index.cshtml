@@ -1,0 +1,32 @@
+﻿@model urlopy2.ViewModels.HomeVM
+
+<h2>@Model.Tytul</h2>
+
+ 	@foreach (var pracownik in Model.Pracownicy) 
+	{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <div class="thumbnail">
+            <img src="@pracownik.MiniaturkaUrl" alt="">
+            <div class="caption">
+                <h3 class="pull-right">@pracownik.FirstName @pracownik.LastName</h3>
+                <h3>
+                    <!--<a asp-controller="Home" asp-action="Szczegoly" asp-route-id="@pracownik.Id"></a> -->
+                </h3>
+                <h4>
+                    Email : @pracownik.EmailAddress
+                </h4>
+                <h4>
+                    Telefon : @pracownik.PhoneNumber
+                </h4>
+                <h4>
+                    Urlop od : @pracownik.DataOd
+                </h4>
+                <h4>
+                    Urlop do : @pracownik.DataDo
+                </h4>
+                <p>@pracownik.Tekst</p>
+            </div>
+        </div>
+    </div>
+
+	}

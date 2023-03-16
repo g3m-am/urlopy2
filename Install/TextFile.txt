@@ -1,0 +1,14 @@
+﻿//
+brak odwolania do usesqlserver
+pomoglo
+1)	dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+2)	dotnet add package Microsoft.EntityFrameworkCore.Design
+
+// migracja
+kompiluj rozwiazanie
+
+// musi byc
+PM>Install-Package Microsoft.EntityFrameworkCore.Tools
+tera dopiero 
+PM>add-migration InitialMigration
+PM>update-database
